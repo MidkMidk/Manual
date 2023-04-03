@@ -24,7 +24,7 @@ Project 窗口右键单击 > Create > Inventory 即可创建 Inventory 资产，
 
 > 选中继承自 InventoryAsset.Object 类型所在的 C# 文件，在 Inspector 窗口可设置默认 Icon，此处设置的图标会在 Types 窗口显示。
 >
-> 不要随意实例化不认识的继承自 ScriptableObject 实例，这可能导致编辑器或插件的设置被异常修改而报错。
+> 不要随意实例化不认识的继承自 ScriptableObject 的脚本，这可能导致编辑器或插件的设置被异常修改而报错。
 
 ![05](images/05.png)
 
