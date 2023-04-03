@@ -74,7 +74,24 @@ Project 窗口右键单击 > Create > Inventory 即可创建 Inventory 资产，
 
 可通过路径、类型、名称、索引等多种方式查找子资产。
 
-**1. 通过路径查找**
+**1. 公共属性**
+
+InventoryAsset：
+
+~~~c#
+public Folder Root; // 根文件夹
+~~~
+
+InventoryAsset.Folder：
+
+~~~c#
+public int Index; // 文件夹索引，无用，可忽略
+public string Name; // 文件夹名称
+public List<Folder> ChildFolderList; // 子文件夹
+public List<ScriptableObject> ChildObjectList; // 子资产，不包含子文件夹下的资产
+~~~
+
+**2. 通过路径查找**
 
 通过路径查找文件夹：
 
@@ -120,7 +137,7 @@ ScriptableObject apple = _Asset.FindFolder("Foods").FindObjectRelative("Fruits.A
 ScriptableObject apple = _Asset.FindFolder("Foods.Fruits").FindObjectRelative("Apple");
 ~~~
 
-**2. 通过类型和名称查找**
+**3. 通过类型和名称查找**
 
 从根文件夹查找：
 
@@ -144,7 +161,7 @@ Food apple = _Asset.Q<Food>("Apple");
 List<Food> fruits = _Asset.FindFolder("Foods.Fruits").Query<Food>();
 ~~~
 
-**3. 通过索引查找**
+**4. 通过索引查找**
 
 选中 InventoryAsset 资产，在 Inspector 窗口点击 Generate Reference Script 会生成 索引脚本。
 
