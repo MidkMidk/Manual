@@ -170,8 +170,8 @@ List<Food> fruits = _Asset.FindFolder("Foods.Fruits").Query<Food>();
 查找文件夹：
 
 ~~~c#
-InventoryAsset.Folder foods = _Asset[ShopInventory.Foods.index];
-InventoryAsset.Folder fruits = _Asset[ShopInventory.Foods.Fruits.index];
+InventoryAsset.Folder foods = _Asset[ShopInventory.Foods.folder];
+InventoryAsset.Folder fruits = _Asset[ShopInventory.Foods.Fruits.folder];
 ~~~
 
 查找子资产对象：
@@ -199,29 +199,29 @@ ScriptableObject apple = _Asset[ShopInventory.Foods.Fruits.Apple];
 
 public class ShopInventory
 {
-    public const int index = 5;
+    public const int folder = 5;
     public class Foods
     {
-        public const int index = 3;
+        public const int folder = 3;
         public const long Bread = 12884901888;
         public const long Cheese = 12884901889;
         public const long Mushroom = 12884901890;
         public class Fruits
         {
-            public const int index = 0;
+            public const int folder = 0;
             public const long Apple = 0;
             public const long GreenApple = 1;
         }
         public class Meats
         {
-            public const int index = 1;
+            public const int folder = 1;
             public const long FishSteak = 4294967296;
             public const long Ham = 4294967297;
             public const long Meat = 4294967298;
         }
         public class Drinks
         {
-            public const int index = 2;
+            public const int folder = 2;
             public const long Beer = 8589934592;
             public const long Wine = 8589934593;
             public const long Wine2 = 8589934594;
@@ -229,7 +229,7 @@ public class ShopInventory
     }
     public class Potions
     {
-        public const int index = 4;
+        public const int folder = 4;
         public const long Potion = 17179869184;
     }
 }
