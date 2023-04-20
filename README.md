@@ -44,7 +44,7 @@ Project 窗口右键单击 > Create > Scriptory Editor 即可创建 ScriptoryEdi
 
 左键拖拽到此窗口里其它实例上可移动在此文件夹中的位置，鼠标弹起时会根据位置将拖动的实例移动到选中的实例之上或之下。
 
-Instances 窗口最下方存在两个区域，可拖拽 Project 窗口中的资产到这两个区域来将其加入到 ScriptoryEditor 资产中。拖拽到 Add 区域会直接将拖拽的资产添加到 ScriptoryEditor 资产中，拖拽到 Copy 区域会将拖拽资产的复制添加到 ScriptoryEditor 资产中。这两个区域默认只接收继承自 ScriptableObject 的资产，可同时拖拽多个资产，拖拽的资产中包含可接收的资产时，对应的区域会变为蓝色，指针样式也会改变。
+Instances 窗口最下方存在两个区域，可拖拽 Project 窗口中的资产到这两个区域来将其加入到 ScriptoryEditor 资产中。拖拽到 Add 区域会直接将拖拽的资产添加到 ScriptoryEditor 资产中，拖拽到 Copy 区域会将拖拽资产的复制添加到 ScriptoryEditor 资产中。这两个区域默认只接收继承自 ScriptableObject 的资产，可同时拖拽多个资产，拖拽的资产中包含可接收的资产时，对应的区域会变为蓝色，指针样式也会改变。不要通过此种方式添加包含子资产的资产。
 
 ![15](images/15.png)
 
